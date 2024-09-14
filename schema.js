@@ -2,18 +2,22 @@ export const typeDefs = `#graphql
 type Game {
     id: ID!
     title: String! 
-    platform: [String!]! 
+    platform: [String!]!
+    review: [Review!]
 }
 
 type Review {
     id: ID!
     rating: Int!
     content: String!
+    game: Game!
+    author: Author!
 }
 
 type Author {
     id: ID!
     name: String!
+    review: [Review!]
     varified: Boolean!
 }
 
