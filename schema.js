@@ -31,4 +31,20 @@ type Query {
 
 }
 
+type Mutation {
+    addGame(game: AddGameInput!): Game
+    deleteGame(id: ID!): [Game]
+    updateGame(id: ID!, edits: AddGameInput): Game
+
+}
+
+input AddGameInput {
+    title: String!
+    platform: [String!]!
+}
+
+input AddGameInput {
+    title: String
+    platform: [String!]
+}
 `
