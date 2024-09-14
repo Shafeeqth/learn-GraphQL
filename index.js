@@ -6,7 +6,7 @@ const server = ApolloServer({
 
 });
 
-const {url} = await startStandaloneServer(server, {
+const { url } = await startStandaloneServer(server, {
     listen: {
         port: 4000
     }
